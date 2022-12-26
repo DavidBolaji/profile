@@ -131,7 +131,7 @@ export default function Header({themeSet, currentTheme}) {
   return (
     <header>
       <NavBar themeSet={themeSet} />
-      <HeroStyled>
+      <HeroStyled id="#">
         <HeroLeftStyled>
           <StyledButton2>
             <Typewriter

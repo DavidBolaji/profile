@@ -89,7 +89,7 @@ export default function NavBar({themeSet}) {
 
       <ul className="flex white none">
         <li className={active === "Home" ? "green" : ""} onClick={() => setActive('Home')}  onMouseEnter={() => handleMouse('Home')} onMouseLeave={() => handleMouse('')} >
-          <a href="/">{current === "Home" || active === "Home" ? "< Home />" : 'Home'}</a>
+          <a href="/#">{current === "Home" || active === "Home" ? "< Home />" : 'Home'}</a>
         </li>
         <li className={active === "About" ? "green" : ""}  onClick={() => setActive('About')} onMouseEnter={() => handleMouse('About')} onMouseLeave={() => handleMouse('')}>
           <a href="/#about">{current === "About" || active === "About" ? "< About Me />": 'About Me'}</a>
@@ -101,7 +101,7 @@ export default function NavBar({themeSet}) {
           <a href="/#project">{current === "Projects" || active === "Projects"  ? "< Projects />": 'Projects'}</a>
         </li>
          <li className={active === "Contact" ? "green" : ""} onClick={() => setActive('Contact')} onMouseEnter={() => handleMouse('Contact')} onMouseLeave={() => handleMouse('')}>
-          <a href="/#about">{current === "Contact" ? "< Contact />": 'Contact'}</a>
+          <a href="/#contact">{current === "Contact" ? "< Contact />": 'Contact'}</a>
         </li>
         <li>
           <Switch 
@@ -114,7 +114,7 @@ export default function NavBar({themeSet}) {
       <StyledDrawer onClose={onClose} open={open} placement={'left'}>
         <ul className="mobile-ul">
         <li className={active === "Home" ? "green": ""} onClick={() => {setActive('Home'); setOpen(false)}}  onMouseEnter={() => handleMouse('Home')} onMouseLeave={() => handleMouse('')} >
-          <a href="/">{current === "Home" || active === "Home" ? "< Home />" : 'Home'}</a>
+          <a href="/#home">{current === "Home" || active === "Home" ? "< Home />" : 'Home'}</a>
         </li>
         <li className={active === "About" ? "green": ""}  onClick={() => {setActive('About'); setOpen(false)}} onMouseEnter={() => handleMouse('About')} onMouseLeave={() => handleMouse('')}>
           <a href="/#about">{current === "About" || active === "About" ? "< About Me />": 'About Me'}</a>
@@ -126,7 +126,7 @@ export default function NavBar({themeSet}) {
           <a href="/#project">{current === "Projects" || active === "Projects"  ? "< Projects />": 'Projects'}</a>
         </li>
          <li className={active === "Contact" ? "green": ""} onClick={() => {setActive('Contact'); setOpen(false)}} onMouseEnter={() => handleMouse('Contact')} onMouseLeave={() => handleMouse('')}>
-          <a href="/#about">{current === "Contact" ? "< Contact />": 'Contact'}</a>
+          <a href="/#contact">{current === "Contact" ? "< Contact />": 'Contact'}</a>
         </li>
         <li>
           <Switch 
