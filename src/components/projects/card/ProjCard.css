@@ -1,0 +1,35 @@
+.proj-card-cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.proj-card-text h2 {
+  max-width: 250px;
+}
+
+.proj-card-img {
+  width: 300px;
+}
+
+.proj-card-img-cont {
+  width: 250px;
+  height: 280px;
+
+  background-position: center;
+  overflow: hidden;
+}
+
+.proj-card-img-cont img {
+  object-fit: cover;
+  width: 90%;
+  height: 100%;
+}
+
+.proj-card-icon-icon {
+  background-color: rgb(13, 124, 233);
+  padding: 10px;
+  border-radius: 50%;
+  transform: translateY(-20px);
+  color: #fff;
+}

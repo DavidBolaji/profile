@@ -1,0 +1,54 @@
+.proj {
+  max-width: 100%;
+  background-color: #fcda69;
+}
+
+.proj > * {
+  margin-bottom: 40px;
+}
+
+.proj-one h1 {
+  font-size: 50px;
+  max-width: 200px;
+}
+
+.proj-one h1::before {
+  content: "Projects";
+  font-size: 9px;
+  position: absolute;
+  transform: rotate(-45deg) translate(-12px, -25px);
+  color: #fff;
+  letter-spacing: 0.6px;
+}
+/* .proj:not(:first-child) > * {
+  margin-left: 10px;
+} */
+@media only screen and (min-width: 800px) {
+  .proj {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .proj {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    justify-content: space-around;
+    background-color: #fcda69;
+  }
+
+  .proj-one h1 {
+    font-size: 50px;
+    max-width: 200px;
+  }
+
+  .proj-two {
+    margin-top: 110px;
+  }
+
+  .proj-three {
+    margin-top: 40px;
+  }
+}
