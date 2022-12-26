@@ -110,20 +110,20 @@ const HeroLeftStyled = styled.div`
 export default function Header({themeSet, currentTheme}) {
   const [hover,setHover] = React.useState(false);
 
-  const onButtonClick = () => {
-      // using Java Script method to get PDF file
-          fetch('./cv.pdf').then(response => {
-              response.blob().then(blob => {
-                // Creating new object of PDF file
-                const fileURL = window.URL.createObjectURL(blob);
-                // Setting various property values
-                let alink = document.createElement('a');
-                alink.href = fileURL;
-                alink.download = 'cv.pdf';
-                alink.click();
-          })
-        })
-    }
+  // const onButtonClick = () => {
+  //     // using Java Script method to get PDF file
+  //         fetch('./cv.pdf').then(response => {
+  //             response.blob().then(blob => {
+  //               // Creating new object of PDF file
+  //               const fileURL = window.URL.createObjectURL(blob);
+  //               // Setting various property values
+  //               let alink = document.createElement('a');
+  //               alink.href = fileURL;
+  //               alink.download = 'cv.pdf';
+  //               alink.click();
+  //         })
+  //       })
+  //   }
 
   const handleHover = () => {
     setHover(prev => !prev);
@@ -131,7 +131,7 @@ export default function Header({themeSet, currentTheme}) {
   return (
     <header>
       <NavBar themeSet={themeSet} />
-      <HeroStyled id="#">
+      <HeroStyled id="#home">
         <HeroLeftStyled>
           <StyledButton2>
             <Typewriter
@@ -153,8 +153,8 @@ export default function Header({themeSet, currentTheme}) {
           </StyledPara>
           
           <div>
-            <StyledLink className="green" href='/cv.pdf'>
-              <Button onClick={onButtonClick}>Resume</Button>
+            <StyledLink className="green" href='https://drive.google.com/file/d/1i7GkfIkEHEOkSPQDEljdURWM-sWL3TSz/view?usp=sharing' target={'_blank'}>
+              <Button type="button">Resume</Button>
             </StyledLink>
             <StyledLink href='https://wa.me/+2348107483900' onMouseEnter={handleHover} onMouseLeave={handleHover} className={`animate__animated animate__flash animate__slow ${!hover ? 'animate__infinite infinite': ''} green`} >
               <Button className="block">Let's Chat</Button>

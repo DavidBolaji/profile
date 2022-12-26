@@ -190,6 +190,10 @@ footer ul li {
   margin-left: 1rem;
 }
 
+:where(.css-dev-only-do-not-override-3n0g1w).ant-drawer .ant-drawer-content {
+  width: 90vw;
+}
+
 /* --------- Responsive Design --------- */
 @media (max-width: 810px) {
   .none {

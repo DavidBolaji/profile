@@ -8,7 +8,8 @@ import DavidPic from '../assets/images/dav.jpg'
 // import { Link } from "react-router-dom";
 
 const StyledDrawer = styled2(Drawer)`
-.ant-drawer-wrapper-body {
+  position: relative;
+  .ant-drawer-wrapper-body {
     background-color: #040c18;
     color: #7b86a4;
     font-size: 18px;
@@ -16,15 +17,14 @@ const StyledDrawer = styled2(Drawer)`
   }
   .ant-drawer-close {
     position: absolute;
-    // display: none;
-    color: #fff;
     right: 0;
-    top: 0px;
-    transform: translateX(46px);
+    color: #fff;
+    right: -10px;
+    z-index: 100px;
+    top: 10px;
     background: #7b86a4;
     width: 34px;
     height: 40px;
-    // border-radius: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,7 +89,7 @@ export default function NavBar({themeSet}) {
 
       <ul className="flex white none">
         <li className={active === "Home" ? "green" : ""} onClick={() => setActive('Home')}  onMouseEnter={() => handleMouse('Home')} onMouseLeave={() => handleMouse('')} >
-          <a href="/#">{current === "Home" || active === "Home" ? "< Home />" : 'Home'}</a>
+          <a href="/#home">{current === "Home" || active === "Home" ? "< Home />" : 'Home'}</a>
         </li>
         <li className={active === "About" ? "green" : ""}  onClick={() => setActive('About')} onMouseEnter={() => handleMouse('About')} onMouseLeave={() => handleMouse('')}>
           <a href="/#about">{current === "About" || active === "About" ? "< About Me />": 'About Me'}</a>
@@ -111,7 +111,7 @@ export default function NavBar({themeSet}) {
           />
         </li>
       </ul>
-      <StyledDrawer onClose={onClose} open={open} placement={'left'}>
+      <StyledDrawer onClose={onClose} open={open} placement={'left'} size={'50%'}>
         <ul className="mobile-ul">
         <li className={active === "Home" ? "green": ""} onClick={() => {setActive('Home'); setOpen(false)}}  onMouseEnter={() => handleMouse('Home')} onMouseLeave={() => handleMouse('')} >
           <a href="/#home">{current === "Home" || active === "Home" ? "< Home />" : 'Home'}</a>

@@ -187,8 +187,10 @@ export default function Projects() {
                             <p>
                                 {data?.lang.map(l => <Tag key={String(Math.random())} style={{backgroundColor: '#4dba87', color: '#fff', border: '1px solid #4dba87'}}>{l}</Tag>)}
                             </p>
-                            <StyledLink onMouseEnter={handleHover} onMouseLeave={handleHover} className={`animate__animated animate__flash animate__slow ${!hover ? 'animate__bounce infinite': ''} green`} >
-                            <Button target={data.link}>Visit</Button>
+                            <StyledLink target={'_blank'} href={data.link} onMouseEnter={handleHover} onMouseLeave={handleHover} className={`animate__animated animate__flash animate__slow ${!hover ? 'animate__bounce infinite': ''} green`} >
+                            <Button target={data.link}>
+                              Visit
+                            </Button>
                             </StyledLink>
                         </div>
                         <StyledAboutRight data-aos={'fade-up'} data-aos-duration={1500}>
