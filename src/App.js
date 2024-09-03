@@ -4,16 +4,14 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Contact from "./components/Contact";
-import Typewriter from "typewriter-effect";
 import "animate.css";
 import AOS from "aos";
 
 import "aos/dist/aos.css";
-import { Avatar, ConfigProvider, Spin } from "antd";
+import {  ConfigProvider } from "antd";
 import { darkTheme, lightTheme } from "./theme";
 import { ThemeProvider } from "styled-components";
-import DavidPic from './assets/images/dav.jpg'
-import Experience from "./components/Experience";
+
 import Projects from "./components/Projects";
 
 export default function App() {
@@ -89,7 +87,6 @@ export default function App() {
           <main>
             {/* About */}
             <About />
-            <Experience />
             <Projects />
             <Contact />
           </main>

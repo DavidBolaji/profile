@@ -77,7 +77,6 @@ export const StyledLink = styled.a`
   button.block {
     background-color: ${(props) => props.theme.textbg};
     color: #fff;
-    /* font-weight: 700; */
     text-transform: uppercase;
   }
 
@@ -85,11 +84,6 @@ export const StyledLink = styled.a`
     color: #fff;
     background-color: transparent;
   }
-`;
-
-const StyledButton = styled.button`
-  cursor: text;
-  margin-bottom: 1.5rem;
 `;
 
 const StyledButton2 = styled.button`
@@ -109,21 +103,6 @@ const HeroLeftStyled = styled.div`
 
 export default function Header({themeSet, currentTheme}) {
   const [hover,setHover] = React.useState(false);
-
-  // const onButtonClick = () => {
-  //     // using Java Script method to get PDF file
-  //         fetch('./cv.pdf').then(response => {
-  //             response.blob().then(blob => {
-  //               // Creating new object of PDF file
-  //               const fileURL = window.URL.createObjectURL(blob);
-  //               // Setting various property values
-  //               let alink = document.createElement('a');
-  //               alink.href = fileURL;
-  //               alink.download = 'cv.pdf';
-  //               alink.click();
-  //         })
-  //       })
-  //   }
 
   const handleHover = () => {
     setHover(prev => !prev);
@@ -153,7 +132,7 @@ export default function Header({themeSet, currentTheme}) {
           </StyledPara>
           
           <div>
-            <StyledLink className="green" href='https://drive.google.com/file/d/1i7GkfIkEHEOkSPQDEljdURWM-sWL3TSz/view?usp=sharing' target={'_blank'}>
+            <StyledLink className="green" href='https://res.cloudinary.com/dpi44zxlw/image/upload/v1725363084/David_cv_cjagde.pdf' target={'_blank'}>
               <Button type="button">Resume</Button>
             </StyledLink>
             <StyledLink href='https://wa.me/+2348107483900' onMouseEnter={handleHover} onMouseLeave={handleHover} className={`animate__animated animate__flash animate__slow ${!hover ? 'animate__infinite infinite': ''} green`} >
@@ -161,10 +140,8 @@ export default function Header({themeSet, currentTheme}) {
             </StyledLink>
           </div>
         </HeroLeftStyled>
-        {/* <div style={{flex: '0.5'}}> */}
           <Skills ct={currentTheme} />
-        {/* </div> */}
-        {/* <Image src="" width={463} height={513} alt="david" /> */}
+     
       </HeroStyled>
     </header>
   );

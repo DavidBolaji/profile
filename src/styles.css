@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -24,9 +24,18 @@ h2,
 h3,
 h4,
 h5,
-h6,
-p {
+h6
+ {
   margin: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+p {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 .dark-bg {
   background-color: #25262a;
@@ -131,26 +140,22 @@ nav ul li:hover {
 /* About */
 .about-card {
   width: 90%;
-  padding: 2rem;
+  padding: 2rem 2rem 0.5rem 2rem;
   margin-top: 0.5em;
   border-radius: 0.5rem;
 }
 .about-card h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 0.3rem;
 }
 .about-card p {
-  font-size: 0.8rem;
+  font-size: 0.825rem;
   font-weight: 500;
   margin-bottom: 1rem;
+  max-width: 22rem;
+  line-height: 1.4rem;
 }
-.about-card span {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: underline;
-}
+
 .about-text h1 {
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -192,6 +197,12 @@ footer ul li {
 
 :where(.css-dev-only-do-not-override-3n0g1w).ant-drawer .ant-drawer-content {
   width: 90vw;
+}
+
+/* ---canvas-orbit ----*/
+.canvas-orbit {
+  width: 100%;
+  height: 100%;
 }
 
 /* --------- Responsive Design --------- */

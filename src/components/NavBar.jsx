@@ -1,6 +1,5 @@
-import { Avatar, Button, Drawer, Switch } from "antd";
+import { Avatar, Drawer  } from "antd";
 import React, { useState } from "react";
-import { FaMoon, FaSun } from 'react-icons/fa';
 import { RiMenu3Fill } from 'react-icons/ri';
 import styled from "styled-components";
 import styled2 from '@emotion/styled';
@@ -9,12 +8,10 @@ import DavidPic from '../assets/images/dav.jpg'
 
 const StyledDrawer = styled2(Drawer)`
   position: relative;
-  .ant-drawer-wrapper-body {
-    background-color: #040c18;
-    color: #7b86a4;
-    font-size: 18px;
-    border-right: 1px solid #a5a4a47f;
-  }
+  background-color: #040c18 !important;
+  color: #7b86a4;
+  border-right: 1px solid #a5a4a47f;
+  font-size: 18px;
   .ant-drawer-close {
     position: absolute;
     right: 0;
@@ -89,51 +86,31 @@ export default function NavBar({themeSet}) {
 
       <ul className="flex white none">
         <li className={active === "Home" ? "green" : ""} onClick={() => setActive('Home')}  onMouseEnter={() => handleMouse('Home')} onMouseLeave={() => handleMouse('')} >
-          <a href="/#home">{current === "Home" || active === "Home" ? "< Home />" : 'Home'}</a>
+          <a href="/#home">{current === "Home" || active === "Home" ? "Home" : 'Home'}</a>
         </li>
         <li className={active === "About" ? "green" : ""}  onClick={() => setActive('About')} onMouseEnter={() => handleMouse('About')} onMouseLeave={() => handleMouse('')}>
-          <a href="/#about">{current === "About" || active === "About" ? "< About Me />": 'About Me'}</a>
-        </li>
-         <li className={active === "Work" ? "green" : ""} onClick={() => setActive('Work')} onMouseEnter={() => handleMouse('Work')} onMouseLeave={() => handleMouse('')}>
-          <a href="/#work">{current === "Work" || active === "Work"  ? "< Work />": 'Work'}</a>
+          <a href="/#about">{current === "About" || active === "About" ? "About": 'About'}</a>
         </li>
          <li className={active === "Projects" ? "green" : ""} onClick={() => setActive('Projects')} onMouseEnter={() => handleMouse('Projects')} onMouseLeave={() => handleMouse('')}>
-          <a href="/#project">{current === "Projects" || active === "Projects"  ? "< Projects />": 'Projects'}</a>
+          <a href="/#project">{current === "Projects" || active === "Projects"  ? "Projects": 'Projects'}</a>
         </li>
          <li className={active === "Contact" ? "green" : ""} onClick={() => setActive('Contact')} onMouseEnter={() => handleMouse('Contact')} onMouseLeave={() => handleMouse('')}>
-          <a href="/#contact">{current === "Contact" ? "< Contact />": 'Contact'}</a>
-        </li>
-        <li>
-          <Switch 
-            checkedChildren={<FaMoon />}
-            unCheckedChildren={<FaSun />}
-            onChange={onChangeHandler}
-          />
+          <a href="/#contact">{current === "Contact" ? "Contact": 'Contact'}</a>
         </li>
       </ul>
       <StyledDrawer onClose={onClose} open={open} placement={'left'} size={'50%'}>
         <ul className="mobile-ul">
         <li className={active === "Home" ? "green": ""} onClick={() => {setActive('Home'); setOpen(false)}}  onMouseEnter={() => handleMouse('Home')} onMouseLeave={() => handleMouse('')} >
-          <a href="/#home">{current === "Home" || active === "Home" ? "< Home />" : 'Home'}</a>
+          <a href="/#home">{current === "Home" || active === "Home" ? "Home" : 'Home'}</a>
         </li>
         <li className={active === "About" ? "green": ""}  onClick={() => {setActive('About'); setOpen(false)}} onMouseEnter={() => handleMouse('About')} onMouseLeave={() => handleMouse('')}>
-          <a href="/#about">{current === "About" || active === "About" ? "< About Me />": 'About Me'}</a>
+          <a href="/#about">{current === "About" || active === "About" ? "About Me": 'About Me'}</a>
         </li>
          <li className={active === "Work" ? "green": ""} onClick={() => {setActive('Work'); setOpen(false)}} onMouseEnter={() => handleMouse('Work')} onMouseLeave={() => handleMouse('')}>
-          <a href="/#work">{current === "Work" || active === "Work"  ? "< Work />": 'Work'}</a>
-        </li>
-         <li className={active === "Projects" ? "green": ""} onClick={() => {setActive('Projects'); setOpen(false)}} onMouseEnter={() => handleMouse('Projects')} onMouseLeave={() => handleMouse('')}>
-          <a href="/#project">{current === "Projects" || active === "Projects"  ? "< Projects />": 'Projects'}</a>
+          <a href="/#work">{current === "Work" || active === "Work"  ? "Work": 'Work'}</a>
         </li>
          <li className={active === "Contact" ? "green": ""} onClick={() => {setActive('Contact'); setOpen(false)}} onMouseEnter={() => handleMouse('Contact')} onMouseLeave={() => handleMouse('')}>
-          <a href="/#contact">{current === "Contact" ? "< Contact />": 'Contact'}</a>
-        </li>
-        <li>
-          <Switch 
-            checkedChildren={<FaMoon />}
-            unCheckedChildren={<FaSun />}
-            onChange={onChangeHandler}
-          />
+          <a href="/#contact">{current === "Contact" ? "Contact": 'Contact'}</a>
         </li>
       </ul>
       </StyledDrawer>

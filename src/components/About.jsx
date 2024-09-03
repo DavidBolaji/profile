@@ -1,14 +1,10 @@
-import React from "react";
-import DesignIcon from '../assets/icons/design.svg';
-import CodeIcon from '../assets//icons/code.svg';
-import PhoneIcon from '../assets/icons/phone.svg';
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
+import { FaCode, FaDatabase, FaDev } from 'react-icons/fa'
 
 const AboutStyled = styled.div`
   padding: 80px;
-  /* align-items: flex-start; */
   background-color: ${(props) => props.theme.bg};
-  /* background-color: #fff; */
   height: 100vh;
   padding-bottom: 100px;
 
@@ -16,24 +12,25 @@ const AboutStyled = styled.div`
     align-items: 'flex-start';
     display: flex;
 
-    @media (max-width: 810px) { 
+    @media (max-width: 810px) {
       flex-direction: column;
     }
   }
 
-   @media (max-width: 810px) { 
-      padding-left: 20px;
-      padding-right: 20px;
-      padding-bottom: 40px;
-      height: auto;
-    }
-`;
+  @media (max-width: 810px) {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 40px;
+        padding-top: 150px;
+    height: auto;
+  }
+`
 
 const StyledH2 = styled.h2`
   color: #fff;
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 100px;
+  margin-bottom: 90px;
   position: relative;
   text-transform: uppercase;
 
@@ -42,21 +39,23 @@ const StyledH2 = styled.h2`
     width: 10%;
     height: 5px;
     margin-top: 10px;
-    background-color:${(props) => props.theme.textbg};
+    background-color: ${(props) => props.theme.textbg};
     display: block;
     position: absolute;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
-`;
+
+  @media (max-width: 810px) {
+    margin-bottom: 50px !important;
+  }
+`
 
 const StyledAboutRight = styled.div`
-   flex: 1;
-   /* justify-content: flex-start; */
-   height: auto;
-   align-items: stretch;
+  flex: 1;
+  margin-top: -30px;
 
-   h1 {
+  h1 {
     margin-top: 1rem;
     margin-bottom: 2rem;
     font-weight: 500;
@@ -71,10 +70,11 @@ const StyledAboutRight = styled.div`
     color: #fff;
   }
   p {
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1rem;
     text-align: justify;
-    color: #777777;
+    color: #ffffff;
+    line-height: 1.65rem;
   }
   .partners {
     padding-top: 5rem;
@@ -82,10 +82,10 @@ const StyledAboutRight = styled.div`
   h5 {
     color: #777777;
   }
-   @media (max-width: 810px) { 
-      margin-top: 20px;
-    }
-`;
+  @media (max-width: 810px) {
+    margin-top: 20px;
+  }
+`
 
 export default function About() {
   return (
@@ -94,67 +94,57 @@ export default function About() {
       <div className="div">
         <div className="flex-full">
           <AboutCard
-            title="UX/UI Design"
-            icon={DesignIcon}
-            description="I create and design products with unique ideas."
+            title="Full Stack Development"
+            icon={<FaCode color="white" />}
+            description="Building seamless web applications from front-end to back-end systems."
             projects={7}
-            data={"flip-left"}
-            duration={600}
           />
           <AboutCard
-            title="Web Design"
-            icon={CodeIcon}
-            description="I develop Full stack applications with coding super smooth."
+            title="Database Schema Orchestration"
+            icon={<FaDatabase color="white" />}
+            description="Designing and managing complex database structures for optimized data flow."
             projects={10}
-            data={"flip-left"}
-            duration={1000}
+          />
+          <AboutCard
+            title="Devops/Deployment"
+            icon={<FaDev color="white" />}
+            description="Automating software deployment, ensuring seamless integration, and scalable operations."
+            projects={10}
           />
         </div>
 
         <StyledAboutRight data-aos={'fade-up'} data-aos-duration={1500}>
           <h5>Introduction</h5>
           <h1>Hello, I&#39;m Ologunleko David</h1>
-          <h3>
-            Design is not just what it looks like. Design is how it works!
-          </h3>
+          <h3>Design is not just what it looks like. Design is how it works!</h3>
           <p>
-            I have proceeded my dream to be a developer as it has been my
-            lifelong ambition. I am a talented Fullstack developer.
-            since graduation I have had
-            the opportunity to enhance my expertise by collaborating with
-            different companies and by creating useful content for both business
-            and customer use.
-            <br />
-            <br />I am naturally persevered, self-confident, quietly curios,
-            innovative and constantly challenging my skills as i am determined to bring change to the world.
-            <br />
+            I&apos;m a passionate Full Stack Developer with expertise in building scalable web applications using modern technologies like React,
+            Next.js, Node.js, and MySQL. My journey in software development has equipped me with a strong foundation in both front-end and
+            back-end technologies, allowing me to craft optimized, user-friendly interfaces and develop robust server-side logic. I take
+            pride in my ability to translate complex requirements into intuitive, high-performance applications that meet user needs and
+            business goals.
+          </p>
+          <p>
+          Over the years, I&apos;ve gained diverse experience across multiple industries, leading teams to
+            successfully deliver high-quality projects. I&apos;ve worked on everything from integrating third-party APIs like Paystack and Zoho
+            to orchestrating database operations with Prisma, ensuring seamless performance and reliability. My commitment to continuous
+            learning drives me to stay updated with the latest technologies and trends, always seeking out challenging projects that push
+            the boundaries of my skills.
           </p>
         </StyledAboutRight>
       </div>
     </AboutStyled>
-  );
+  )
 }
 
-function AboutCard({
-  title,
-  icon,
-  description,
-  projects,
-  data,
-  duration,
-}) {
+function AboutCard({ title, icon, description, projects }) {
   return (
-    <div
-      className="light-bg about-card"
-      data-aos={data}
-      data-aos-duration={duration}
-    >
+    <div className="light-bg about-card" >
       <div className="flex justify-space">
         <h3 className="green">{title}</h3>
-        <img src={icon} width={28} height={28} alt={title} />
+        {icon}
       </div>
       <p className="white">{description}</p>
-      <span className="gray">{projects.toString()} projects</span>
     </div>
-  );
+  )
 }

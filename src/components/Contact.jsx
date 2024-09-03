@@ -32,7 +32,7 @@ const StyledH2 = styled.h2`
   color: #fff;
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 100px;
+  margin-bottom: 90px;
   position: relative;
   text-transform: uppercase;
 
@@ -46,6 +46,10 @@ const StyledH2 = styled.h2`
     position: absolute;
     left: 50%;
     transform: translate(-50%,-50%);
+  }
+
+  @media (max-width: 810px) {
+    margin-bottom: 70px !important;
   }
 `;
 
