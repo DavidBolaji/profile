@@ -128,16 +128,32 @@ const StyledAboutLeft = styled.div`
 const dataHash = [
   {
     id: 'p1',
-    heading: 'HMS',
-    para: 'Tayture.com is a hiring management platform that streamlines recruitment processes, integrating payment and CRM systems for efficient operations',
+    heading: 'Tayture',
+    para: 'A modern recruitment management system that revolutionizes hiring processes with integrated payments and CRM functionality. Designed for HR professionals seeking efficient candidate tracking and team collaboration.',
     link: 'https://tayture.com',
-    lang: ['Next', 'Rtq', 'TailwindCss', 'Typescript', 'MYSQL', 'Vercel'],
+    lang: ['Next', 'Antd', 'TailwindCss', 'Typescript', 'MYSQL', 'Node', 'docker'],
     icon: 'https://res.cloudinary.com/dpi44zxlw/image/upload/v1725358601/tayture-ezgif.com-video-to-gif-converter_1_gifmx7.gif'
+  },
+  {
+    id: 'p7',
+    heading: 'EranPro',
+    para: 'An innovative meat ordering platform transforming traditional procurement methods. Features automated ordering workflows, real-time inventory management, and seamless payment processing for meat vendors and buyers.',
+    link: 'https://buyeranpro.com',
+    lang: ['Next', 'TanstackQuery', 'ShadCN', 'Typescript', 'MYSQL', 'Vercel'],
+    icon: 'https://res.cloudinary.com/dpi44zxlw/image/upload/v1738682593/eran-mp4-ezgif.com-video-to-gif-converter_mq1gce.gif'
+  },
+  {
+    id: 'p8',
+    heading: 'Mtalli',
+    para: 'A comprehensive tourism management platform that simplifies travel planning and booking. Offers seamless payment integration and intuitive interfaces for both travelers and tourism operators.',
+    link: 'https://www.gomtalii.com/',
+    lang: ['Next', 'Rtq', 'TailwindCss', 'Typescript', 'MYSQL', 'Vercel'],
+    icon: 'https://res.cloudinary.com/dpi44zxlw/image/upload/v1738682922/mtalli-mp4-ezgif.com-optimize_1_zbmubm.gif'
   },
   {
     id: 'p2',
     heading: 'E-commerce',
-    para: 'RoyalBeauty is an e-commerce platform offering a wide range of beauty products, featuring a user-friendly shopping experience and secure payments',
+    para: 'A sophisticated beauty e-commerce platform delivering premium cosmetic products. Features an elegant interface, advanced product filtering, and secure payment processing for a luxurious shopping experience.',
     link: 'https://royalbeautyb.com',
     lang: ['Next', 'ShadCN', 'MYSQL', 'Prisma', 'React', 'Vercel'],
     icon: 'https://res.cloudinary.com/dpi44zxlw/image/upload/v1725358884/royalb-ezgif.com-video-to-gif-converter_msjs1y.gif'
@@ -145,7 +161,7 @@ const dataHash = [
   {
     id: 'p3',
     heading: 'Product Listing App',
-    para: 'A 3D prototype clothing listing platform that offers realistic apparel browsing, featuring a user-friendly interface for performng all crud operations.',
+    para: 'An innovative 3D clothing visualization platform featuring immersive product displays. Enables complete product management with intuitive CRUD operations and realistic apparel previews.',
     link: 'https://bolaji-stackbuld-test.netlify.app/',
     lang: ['Next', 'TailwinCss', 'MongoDb', 'Prisma', 'Netlify'],
     icon: 'https://res.cloudinary.com/dpi44zxlw/image/upload/v1725363199/stuckbuld-ezgif.com-video-to-gif-converter_pvnjba.gif'

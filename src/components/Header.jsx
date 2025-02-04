@@ -132,7 +132,7 @@ export default function Header({themeSet, currentTheme}) {
           </StyledPara>
           
           <div>
-            <StyledLink className="green" href='https://res.cloudinary.com/dpi44zxlw/image/upload/v1725363084/David_cv_cjagde.pdf' target={'_blank'}>
+            <StyledLink className="green" href='https://res.cloudinary.com/dpi44zxlw/image/upload/v1738685024/David_Ologunleko-8_f8fqjx.pdf' target={'_blank'}>
               <Button type="button">Resume</Button>
             </StyledLink>
             <StyledLink href='https://wa.me/+2348107483900' onMouseEnter={handleHover} onMouseLeave={handleHover} className={`animate__animated animate__flash animate__slow ${!hover ? 'animate__infinite infinite': ''} green`} >
